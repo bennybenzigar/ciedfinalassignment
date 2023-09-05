@@ -1,0 +1,32 @@
+<div class="row">
+    <div  *ngIf="hidenav" class="col-md-2">
+        <app-sidenav></app-sidenav>
+    </div>
+
+    <div *ngIf="hidenav==false">
+        <a class="btn " *ngIf="screenWidth<768" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button"
+        aria-controls="offcanvasExample">
+        <i class="fa-solid fa-bars"></i>
+      </a>
+      <!-- <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+        Button with data-bs-target
+      </button> -->
+
+      <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample"
+        aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header">
+          <!-- <h5 class="offcanvas-title" id="offcanvasExampleLabel"></h5> -->
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <div>
+            <app-sidenav></app-sidenav>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="col-md-10">
+        <router-outlet></router-outlet>
+    </div>
+</div>

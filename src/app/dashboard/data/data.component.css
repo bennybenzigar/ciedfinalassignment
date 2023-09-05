@@ -1,0 +1,234 @@
+td {
+    height: 3.75rem;
+}
+
+p {
+    margin-bottom: 0px;
+}
+
+h1 {
+    font-size: 1.50rem;
+}
+th{
+    background-color:#EFF1F3
+}
+.lorem {
+    font-size: 0.88rem;
+
+}
+
+.trhover {
+    display: none;
+}
+
+tr:hover {
+    .trhover {
+        display: block;
+        cursor: pointer;
+    }
+}
+
+.support {
+    font-size: 0.88rem;
+    ;
+    margin: 0;
+
+}
+
+.support span {
+    font-size: 0.88rem;
+    font-weight: bold;
+
+}
+
+.info {
+    background-color: #FF831A;
+    height: 2.00rem;
+    width: 2.00rem;
+}
+
+.iDiv {
+    display: flex;
+    justify-content: space-between;
+    width: max-content;
+    border: 1px solid #EAEAEA;
+    align-items: center;
+    border-radius: 50px;
+    padding: 2px;
+    margin-bottom: 1.1875rem;
+}
+
+.card {
+
+    /* width: 13.56rem; */
+    border-radius: 0.63rem;
+    padding: 1.50rem;
+
+}
+
+.ptype {
+    font-size: 0.88rem;
+    margin: 0;
+}
+
+.pamount {
+    font-size: 2.13rem;
+    margin: 0;
+}
+
+.ppercentage {
+    font-size: 0.75rem;
+    margin: 0;
+    border-radius: 0.56rem;
+    padding: 0px 2px;
+}
+
+.pmonth {
+    font-size: 0.88rem;
+    margin: 0
+}
+
+.arrow {
+    width: 0.56rem;
+
+}
+
+.cardDiv {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.sidenavdiv {
+    z-index: 4;
+    height: 100%;
+    overflow: hidden;
+}
+
+td,
+th {
+    font-size: 0.88rem;
+}
+
+.trow {
+    background-color: #858889;
+}
+
+.help {
+    font-size: 0.75rem;
+
+}
+
+.dashboardtxt{
+margin-top: 2.2rem;
+}
+.viewlink{
+    cursor: pointer;
+    text-decoration: none;
+    color:black
+}
+
+@media screen and (max-width: 768px) {
+    .cardDiv {
+        /* margin: 1rem; */
+      
+            /* margin: 16px; */
+            align-items: center;
+            display: flex;
+            justify-content: center;
+
+    }
+
+    .main {
+        z-index: 0;
+        position: absolute;
+        top: 0;
+        /* background-color: aqua; */
+        /* display: none; */
+        overflow: auto;
+    }
+
+    .sidenavdiv {
+        display: none;
+        position: fixed;
+        top: 0;
+        z-index: 4;
+        height: 100vh;
+        width: 97vw;
+        /* background-color: aqua; */
+        background-color: white;
+        color: black;
+    }
+
+    .pamount {
+        text-align: center;
+    }
+
+    .card {
+        height: 10.375;
+        padding: 2.5rem
+    }
+
+    html {
+        font-size: 10px;
+    }
+}
+
+.navborder{
+    /* border :0px 0px 0px 1px solid grey */
+    /* border:0px 0px 1px 0px solid grey */
+    /* Apply a solid red border to elements with the class "example" */
+/* .example { */
+    border-right: 1px solid rgb(236, 236, 236);
+/* } */
+
+}
+
+@media (min-width: 768px) {
+   .card{
+    /* width: 220px; */
+    width: auto;
+    height: 140px;
+   }
+
+   /* .iDiv{
+    width: auto
+    ;
+   } */
+  }
+
+  @media (min-width: 576px) {
+    .card {
+      /* background-color: lightblue; */
+      width:auto
+    }
+
+    /* .iDiv{
+        width: auto;
+    } */
+  }
+
+  @media(max-width:768){
+    .iDiv{
+        width: auto;
+    }
+
+    table{
+        width: auto;
+    }
+  }
+
+  
+  @media(max-width:576){
+   .percentageDiv{
+    display: flex;
+    justify-content: center;
+    flex-direction: column-reverse;
+   }
+
+   .iDiv p{
+    width: auto;
+    height: auto;
+    font-size: small;
+   }
+  }

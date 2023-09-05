@@ -1,0 +1,72 @@
+
+
+<div class="container">
+    <div>
+        <h1 class="dashboardtxt">Dashboard</h1>
+        <p class="lorem mb-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+        <div class="iDiv">
+            <i
+                class="fa-solid fa-info rounded-circle text-white info me-1  d-flex align-items-center justify-content-center"></i>
+            <p class="support me-1">You Have <span class="me-1">32 Support Request for Response</span>
+                <span><a class="viewlink">View</a></span>
+            </p>
+        </div>
+    </div>
+    <div class="cardDiv w-100">
+        <div class="row w-100">
+            <div *ngFor="let cdata of cardData;let i=index"
+                class="card m-1 col-lg-2 col-md-3 col-sm-5 text-white"
+                [ngStyle]="{ 'background-color': i % 2 === 0 ? '#005EFF' : '#4A9C88' }">
+                <p class="ptype">{{cdata.type}}</p>
+                <p class="pamount">{{cdata.amount}}</p>
+                <div class="d-flex justify-content-between align-items-center percentageDiv">
+                    <p class="ppercentage text-dark bg-white  ">{{cdata.percentage}}% <i
+                            *ngIf="cdata.percentage>0" class="fa-solid fa-arrow-up arrow"></i>
+                        <i *ngIf="cdata.percentage <0" class="fa-solid fa-arrow-down arrow"></i>
+                    </p>
+                    <p class="ms-1 pmonth">{{cdata.month}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mt-3">
+        <h1>Recently Active Users</h1>
+        <div class="table-responsive-lg">
+            <table class="table table-hover ">
+                <thead>
+                    <tr class="trow">
+                        <th>USERID/NAME</th>
+                        <th>Phone Number</th>
+                        <th>Transaction Category</th>
+                        <th>Transaction Amount</th>
+                        <th>Account Type</th>
+                        <th>Balance Amount</th>
+                        <th style="width: 90px;"></th>
+                    </tr>
+                </thead>
+                <tbody *ngFor="let data of tableData">
+                    <tr>
+                        <td class="d-block">
+                            <p>{{data.name}} </p>
+                            <p style="color: #707070;">ID {{data.userId}}</p>
+                        </td>
+                        <td>{{data.phonenumber}}</td>
+                        <td class="d-block">
+                            <p>{{data.transactionCategory.type}}</p>
+                            <p style="color: #707070;">{{data.transactionCategory.category}}</p>
+                        </td>
+                        <td>
+                            {{data.transactionAmount}}
+                        </td>
+                        <td>{{data.accountType}}</td>
+                        <td>{{data.balanceAmount}}</td>
+                        <td><a class="trhover">view</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="w-100 text-center">
+            <button class="button rounded-5 viewbtn" (click)="view()">{{viewbtn}}</button>
+        </div>
+    </div>
+</div>

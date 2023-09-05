@@ -1,0 +1,41 @@
+<div class="side-nav-content text-dark w-100" [style]="getStyle()">
+    <!-- <button class="close btn-close " *ngIf="screenWidth<700" (click)="hidesidenav()"></button> -->
+
+    <div class="sidenavitems">
+        <h2>Budget</h2>
+        <!-- <ul class="nav-list text-white">
+            <li class="nav-list-item text-dark" *ngFor="let item of list">
+                <i class="{{item.icon}}"></i>
+                <span class="w-100">
+                    <a (click)="hidesidenav()" routerLink={{item.path}}>{{item.name}} </a>
+                </span>
+            </li>
+        </ul> -->
+
+        <ul class="nav-list text-white">
+            <li class="nav-list-item text-dark text-start" *ngFor="let item of list" [routerLinkActive]="['active-li']">
+                
+                <i class="{{item.icon}} ms-1 me-2"></i>
+                <!-- <span class="w-100"> -->
+                    <a (click)="closeOffcanvas()"  routerLinkActive="active-link"  routerLink={{item.path}}>{{item.name}}  </a>
+                <!-- </span> -->
+            </li>
+        </ul>
+        
+
+        <div class="logout mb-2">
+            <img src="assets/Ellipse 151.png" class="img-fluid me-1" alt="">
+            <div class="d-block">
+                <p class="name">Catherine</p>
+                <p class="number">+91 9876543210</p>
+            </div>
+
+        </div>
+
+        <button  (click)="logoutfn()" class="logoutbtn ">
+            <i class="fa-solid fa-right-from-bracket me-1"></i>
+            logout
+        </button>
+    </div>
+
+</div>

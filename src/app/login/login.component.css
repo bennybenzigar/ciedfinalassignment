@@ -1,0 +1,171 @@
+img {
+    /* width: 45.00rem;
+height: 48.13rem; */
+    z-index: 0;
+    position: relative;
+    max-height: 98vh;
+    min-height: auto;
+}
+
+
+.budget {
+    position: absolute;
+    z-index: 2;
+    margin: 3rem 0 0 4rem;
+    font-size: 2.13rem;
+
+}
+
+.main-div {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.gethelp {
+    position: absolute;
+    right: 0;
+    top: 0;
+
+}
+
+
+h2 {
+    font-size: 1.50rem;
+
+}
+
+.passwordDiv {
+    margin: 0;
+    margin-bottom: 1rem;
+
+}
+
+
+
+.passwordlabel {
+    position: absolute;
+    z-index: 2;
+    font-size: 0.75rem;
+    margin: 0;
+}
+
+.passwordinput {
+    position: relative;
+    z-index: 1;
+    height: 3.00rem;
+    margin: 0;
+    border-radius: 0px 0px 10px 10px;
+    /* border: 1px solid #005EFF; */
+
+}
+
+.showbtn {
+    position: absolute;
+    z-index: 2;
+    border: none;
+    font-size: 10px;
+    /* right: 1.3rem; */
+    margin-top: -2.0rem;
+    margin-left: 19rem
+}
+
+.emaillabel {
+    position: absolute;
+    z-index: 2;
+    font-size: 0.75rem;
+    margin: 0
+}
+
+.emailinput {
+    position: relative;
+    z-index: 1;
+    height: 3.00rem;
+    margin: 0;
+    border-radius: 10px 10px 0px 0px;
+    background-color: white;
+    /* border: 1px solid #005EFF; */
+}
+
+.emailinput:focus {
+
+    background-color: white;
+    border-color: blue;
+
+}
+
+.passwordinput:focus {
+    background-color: white;
+    border-color: blue;
+}
+
+.cf {
+    font-size: 0.75rem;
+    text-decoration: none;
+    color: black;
+    margin: 0;
+}
+
+.checkboxDiv {
+    margin-bottom: 1.69rem;
+
+}
+
+.loginbtn {
+
+    height: 3.06rem;
+}
+
+.help{
+font-size:0.75rem ;
+color: black;
+
+}
+.create{
+    cursor: pointer;
+}
+a{
+    text-decoration: none;
+}
+.lorem{
+    font-size: 0.88rem;
+    color:#707070
+}
+@media screen and (max-width: 768px) {
+    .main-div {
+        /* position:a ; */
+        position: relative;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .gethelp {
+        display: flex;
+        /* padding: absolute; */
+
+        /* position: absolute; */
+        /* bottom: 0; */
+        /* right: 0 */
+    }
+
+    html {
+        font-size: 11px;
+    }
+.budget{
+    margin-top: 12px;
+    margin-left: 10px;
+}
+.gethelp{
+  top:23rem
+    
+}
+}
+.viewbtn{
+   font-size: 0.88rem; 
+}
+
+.dropdown-toggle::after{
+    margin-top: 18px;
+}

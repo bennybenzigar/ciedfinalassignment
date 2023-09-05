@@ -1,0 +1,83 @@
+<div class="container-fluid">
+    <div class="row">
+      <div class=" col-md-6 mb-2">
+        <p class="budget">Budget</p>
+        <img class="img-fluid w-100" src="assets/Rectangle 2313.png" alt="">
+      </div>
+      <!-- <img src="https://flagcdn.com/w320/mr.png" style="height: 20px;width: 20px;" alt=""> -->
+      <div class="col-md-6 mt-2 main-div">
+        <!-- <div> -->
+        <div class="d-flex align-items-center mb-2 me-2 gethelp">
+          <a class="me-1 help">Having Trouble? <span class="me-1 fw-bold help">Get Help</span></a>
+  
+  
+  
+          <div class="dropdown">
+            <button class="btn  dropdown-toggle me-1 d-flex" type="button" data-toggle="dropdown" >
+              <div class="d-flex justify-content-center align-items-center">
+                <img src="assets/england.jpg" style="width: 20px;height: 20px;" alt="">
+                <p class="mt-2" style="font-size: small;">Eng</p>
+              </div>
+             
+            </button>
+            <div class="dropdown-menu">
+              <a *ngFor="let option of flags" class="dropdown-item">
+                <!-- <p [src]="option.flagss" alt="{{ option.name }}" class="option-image"> -->
+                  <option>{{option.name}}</option>
+                {{ option.name }}
+              </a>
+            </div>
+          </div>
+  
+  
+        </div>
+        <div class="form-div mt-4 ">
+  
+  
+  
+          <form [formGroup]="loginForm" (ngSubmit)="login()">
+  
+            <h2>Login to Budget</h2>
+            <p class="lorem">Lorem ipsum dolor sit amet, consectetur adipiscing elitc</p>
+            <div>
+              <label class="emaillabel ms-3" for="email">Email</label>
+              <input type="email" formControlName="email" name="email" class="form-control ms-1 emailinput">
+            </div>
+            <div class="passwordDiv">
+              <label class="passwordlabel ms-3" for="password">Password</label>
+              <input type="{{ showPassword ? 'text' : 'password' }}" formControlName="password" name="password"
+                class="form-control passwordinput ms-1 " />
+              <button class="showbtn bg-transparent border-none" type="button" (click)="togglePasswordVisibility()">
+                {{ showPassword ? 'Hide' : 'Show' }}
+              </button>
+            </div>
+  
+  
+            <div class="d-flex justify-content-between align-items-center checkboxDiv">
+              <div class="ms-2">
+                <input class="me-2" formControlName="checkbox" type="checkbox" id="checkbox">
+                <label for="checkbox" class="cf">Keep me logged in</label>
+  
+              </div>
+  
+              <a class="cf">Forgot Password?</a>
+            </div>
+            <div *ngIf="invalidDetails" class="d-flex  justify-content-around" style="font-size: xx-small;color: red;">
+              <p>email id: abc@gmail.com</p>
+              <p> password: abc123</p>
+  
+            </div>
+            <button [disabled]="!loginForm.valid" type="submit" class="btn btn-primary loginbtn w-100">Login</button>
+            <div class="w-100   text-center">
+              <a class="cf create mt-1">Create New Account?</a>
+            </div>
+          </form>
+  
+        </div>
+  
+        <!-- </div> -->
+      </div>
+    </div>
+  
+  
+  </div>
